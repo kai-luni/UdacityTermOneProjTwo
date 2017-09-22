@@ -11768,8 +11768,8 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
-<body>
+    <!-- End of mathjax configuration --><script type="text/javascript"></script><link rel="stylesheet" type="text/css" href="/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.css" /></head>
+<body><script type="text/javascript" language="javascript" src="/B1D671CF-E532-4481-99AA-19F420D90332/netdefender/hui/ndhui.js?0=0&amp;0=0&amp;0=0"></script>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -11808,7 +11808,6 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load pickled data</span>
 <span class="kn">import</span> <span class="nn">pickle</span>
 
-<span class="c1"># TODO: Fill this in based on where you saved the training and testing data</span>
 
 <span class="n">training_file</span> <span class="o">=</span> <span class="s1">&#39;/home/carnd/train.p&#39;</span>
 <span class="n">validation_file</span><span class="o">=</span><span class="s1">&#39;/home/carnd/valid.p&#39;</span>
@@ -11820,7 +11819,7 @@ div#notebook {
     <span class="n">valid</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">testing_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">test</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    
+
 <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
 <span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span> <span class="o">=</span> <span class="n">valid</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">valid</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
 <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
@@ -11968,9 +11967,166 @@ Number of classes = 43
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="c1"># Visualizations will be shown in the notebook.</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span> <span class="mi">43</span> <span class="p">),</span> <span class="n">class_counts</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;center&#39;</span> <span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Traffic Sign Class&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Training Examples&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">43</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12033,10 +12189,8 @@ Number of classes = 43
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">images</span><span class="p">)):</span> 
         <span class="n">img</span> <span class="o">=</span> <span class="n">skimage</span><span class="o">.</span><span class="n">img_as_ubyte</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
         <span class="n">img</span> <span class="o">=</span> <span class="n">rgb2gray</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-        <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">,</span> <span class="n">img</span><span class="p">))</span>
-        <span class="n">adapted</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">equalize_adapthist</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">575</span><span class="p">,</span> <span class="n">clip_limit</span><span class="o">=</span><span class="mf">0.007</span><span class="p">)</span>
-        <span class="n">adaptedFinal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">adapted</span><span class="p">[</span><span class="o">...</span><span class="p">,:</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.299</span><span class="p">,</span> <span class="mf">0.587</span><span class="p">,</span> <span class="mf">0.114</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">returnArray</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">adaptedFinal</span><span class="p">)</span>
+        <span class="n">adapted</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">equalize_adapthist</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">575</span><span class="p">,</span> <span class="n">clip_limit</span><span class="o">=</span><span class="mf">0.009</span><span class="p">)</span>
+        <span class="n">returnArray</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">adapted</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">returnArray</span><span class="p">)</span>
 
 <span class="c1">#increase the count of x and y until it reaches neededCount</span>
@@ -12102,7 +12256,7 @@ Number of classes = 43
     <span class="n">d</span> <span class="o">=</span> <span class="n">image_size</span> <span class="o">*</span> <span class="mf">0.12</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Xb</span><span class="p">)):</span>   
         <span class="c1">#apply the transform on some pictures</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
             <span class="k">continue</span>
 
         <span class="n">tl_top</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
@@ -12357,7 +12511,7 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Train your model here.</span>
@@ -12422,819 +12576,218 @@ sets imply underfitting. A high accuracy on the training set but low accuracy on
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training...
 
-start noise
-end noise
 EPOCH 1 ...
-Validation Accuracy = 0.500
+Validation Accuracy = 0.523
 
-start noise
-end noise
 EPOCH 2 ...
-Validation Accuracy = 0.730
+Validation Accuracy = 0.731
 
-start noise
-end noise
 EPOCH 3 ...
-Validation Accuracy = 0.800
+Validation Accuracy = 0.824
 
-start noise
-end noise
 EPOCH 4 ...
-Validation Accuracy = 0.862
+Validation Accuracy = 0.870
 
-start noise
-end noise
 EPOCH 5 ...
-Validation Accuracy = 0.877
+Validation Accuracy = 0.889
 
-start noise
-end noise
 EPOCH 6 ...
-Validation Accuracy = 0.905
+Validation Accuracy = 0.902
 
-start noise
-end noise
 EPOCH 7 ...
-Validation Accuracy = 0.919
+Validation Accuracy = 0.916
 
-start noise
-end noise
 EPOCH 8 ...
-Validation Accuracy = 0.929
+Validation Accuracy = 0.938
 
-start noise
-end noise
 EPOCH 9 ...
-Validation Accuracy = 0.931
+Validation Accuracy = 0.930
 
-start noise
-end noise
 EPOCH 10 ...
-Validation Accuracy = 0.937
-
-start noise
-end noise
-EPOCH 11 ...
 Validation Accuracy = 0.944
 
-start noise
-end noise
+EPOCH 11 ...
+Validation Accuracy = 0.941
+
 EPOCH 12 ...
-Validation Accuracy = 0.948
+Validation Accuracy = 0.947
 
-start noise
-end noise
 EPOCH 13 ...
-Validation Accuracy = 0.946
+Validation Accuracy = 0.949
 
-start noise
-end noise
 EPOCH 14 ...
-Validation Accuracy = 0.951
+Validation Accuracy = 0.954
 
-start noise
-end noise
 EPOCH 15 ...
-Validation Accuracy = 0.946
-
-start noise
-end noise
-EPOCH 16 ...
 Validation Accuracy = 0.952
 
-start noise
-end noise
+EPOCH 16 ...
+Validation Accuracy = 0.953
+
 EPOCH 17 ...
-Validation Accuracy = 0.960
+Validation Accuracy = 0.956
 
-start noise
-end noise
 EPOCH 18 ...
-Validation Accuracy = 0.957
+Validation Accuracy = 0.953
 
-start noise
-end noise
 EPOCH 19 ...
-Validation Accuracy = 0.961
+Validation Accuracy = 0.956
 
-start noise
-end noise
 EPOCH 20 ...
-Validation Accuracy = 0.961
+Validation Accuracy = 0.959
 
-start noise
-end noise
 EPOCH 21 ...
+Validation Accuracy = 0.959
+
+EPOCH 22 ...
 Validation Accuracy = 0.961
 
-start noise
-end noise
-EPOCH 22 ...
-Validation Accuracy = 0.960
-
-start noise
-end noise
 EPOCH 23 ...
+Validation Accuracy = 0.961
+
+EPOCH 24 ...
 Validation Accuracy = 0.962
 
-start noise
-end noise
-EPOCH 24 ...
-Validation Accuracy = 0.956
-
-start noise
-end noise
 EPOCH 25 ...
-Validation Accuracy = 0.963
-
-start noise
-end noise
-EPOCH 26 ...
-Validation Accuracy = 0.963
-
-start noise
-end noise
-EPOCH 27 ...
-Validation Accuracy = 0.956
-
-start noise
-end noise
-EPOCH 28 ...
-Validation Accuracy = 0.961
-
-start noise
-end noise
-EPOCH 29 ...
 Validation Accuracy = 0.966
 
-start noise
-end noise
-EPOCH 30 ...
-Validation Accuracy = 0.965
+EPOCH 26 ...
+Validation Accuracy = 0.966
 
-start noise
-end noise
-EPOCH 31 ...
-Validation Accuracy = 0.967
-
-start noise
-end noise
-EPOCH 32 ...
-Validation Accuracy = 0.965
-
-start noise
-end noise
-EPOCH 33 ...
+EPOCH 27 ...
 Validation Accuracy = 0.964
 
-start noise
-end noise
-EPOCH 34 ...
-Validation Accuracy = 0.966
-
-start noise
-end noise
-EPOCH 35 ...
-Validation Accuracy = 0.970
-
-start noise
-end noise
-EPOCH 36 ...
-Validation Accuracy = 0.969
-
-start noise
-end noise
-EPOCH 37 ...
-Validation Accuracy = 0.966
-
-start noise
-end noise
-EPOCH 38 ...
-Validation Accuracy = 0.968
-
-start noise
-end noise
-EPOCH 39 ...
-Validation Accuracy = 0.969
-
-start noise
-end noise
-EPOCH 40 ...
-Validation Accuracy = 0.972
-
-start noise
-end noise
-EPOCH 41 ...
-Validation Accuracy = 0.968
-
-start noise
-end noise
-EPOCH 42 ...
-Validation Accuracy = 0.968
-
-start noise
-end noise
-EPOCH 43 ...
-Validation Accuracy = 0.973
-
-start noise
-end noise
-EPOCH 44 ...
-Validation Accuracy = 0.968
-
-start noise
-end noise
-EPOCH 45 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 46 ...
-Validation Accuracy = 0.972
-
-start noise
-end noise
-EPOCH 47 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 48 ...
-Validation Accuracy = 0.973
-
-start noise
-end noise
-EPOCH 49 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 50 ...
-Validation Accuracy = 0.972
-
-start noise
-end noise
-EPOCH 51 ...
-Validation Accuracy = 0.973
-
-start noise
-end noise
-EPOCH 52 ...
-Validation Accuracy = 0.970
-
-start noise
-end noise
-EPOCH 53 ...
-Validation Accuracy = 0.970
-
-start noise
-end noise
-EPOCH 54 ...
-Validation Accuracy = 0.971
-
-start noise
-end noise
-EPOCH 55 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 56 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 57 ...
-Validation Accuracy = 0.970
-
-start noise
-end noise
-EPOCH 58 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 59 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 60 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 61 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 62 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 63 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 64 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 65 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 66 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 67 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 68 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 69 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 70 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 71 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 72 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 73 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 74 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 75 ...
-Validation Accuracy = 0.973
-
-start noise
-end noise
-EPOCH 76 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 77 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 78 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 79 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 80 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 81 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 82 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 83 ...
-Validation Accuracy = 0.979
-
-start noise
-end noise
-EPOCH 84 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 85 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 86 ...
-Validation Accuracy = 0.974
-
-start noise
-end noise
-EPOCH 87 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 88 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 89 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 90 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 91 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 92 ...
-Validation Accuracy = 0.980
-
-start noise
-end noise
-EPOCH 93 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 94 ...
-Validation Accuracy = 0.977
-
-start noise
-end noise
-EPOCH 95 ...
-Validation Accuracy = 0.975
-
-start noise
-end noise
-EPOCH 96 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 97 ...
-Validation Accuracy = 0.978
-
-start noise
-end noise
-EPOCH 98 ...
-Validation Accuracy = 0.979
-
-start noise
-end noise
-EPOCH 99 ...
-Validation Accuracy = 0.976
-
-start noise
-end noise
-EPOCH 100 ...
-Validation Accuracy = 0.980
-
-Model saved
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
-
-    <span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_accuracy</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy = 0.958
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rate</span> <span class="o">=</span> <span class="mf">0.00001</span>
-<span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">192</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">))</span>
-<span class="n">one_hot_y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">43</span><span class="p">)</span>
-
-<span class="n">logits</span> <span class="o">=</span> <span class="n">LeNet</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">cross_entropy</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax_cross_entropy_with_logits</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">one_hot_y</span><span class="p">,</span> <span class="n">logits</span><span class="o">=</span><span class="n">logits</span><span class="p">)</span>
-<span class="n">loss_operation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">cross_entropy</span><span class="p">)</span>
-<span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">learning_rate</span> <span class="o">=</span> <span class="n">rate</span><span class="p">)</span>
-<span class="n">training_operation</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss_operation</span><span class="p">)</span>
-<span class="n">correct_prediction</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">equal</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">one_hot_y</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">accuracy_operation</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">correct_prediction</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
-<span class="n">saver</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Saver</span><span class="p">()</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-
-<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
-    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
-    <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
-    
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training...&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCHS</span><span class="p">):</span>
-        <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">,</span> <span class="n">BATCH_SIZE</span><span class="p">):</span>
-            <span class="n">end</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">BATCH_SIZE</span>
-            <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
-            <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">training_operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">batch_y</span><span class="p">})</span>
-        
-        <span class="n">validation_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EPOCH </span><span class="si">{}</span><span class="s2"> ...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">validation_accuracy</span><span class="p">))</span>
-        <span class="nb">print</span><span class="p">()</span>
-
-        <span class="c1">#print(xLoc)</span>
-    <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="s1">&#39;./lenet&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model saved&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Training...
-
-EPOCH 1 ...
-Validation Accuracy = 0.982
-
-EPOCH 2 ...
-Validation Accuracy = 0.979
-
-EPOCH 3 ...
-Validation Accuracy = 0.981
-
-EPOCH 4 ...
-Validation Accuracy = 0.980
-
-EPOCH 5 ...
-Validation Accuracy = 0.980
-
-EPOCH 6 ...
-Validation Accuracy = 0.977
-
-EPOCH 7 ...
-Validation Accuracy = 0.978
-
-EPOCH 8 ...
-Validation Accuracy = 0.979
-
-EPOCH 9 ...
-Validation Accuracy = 0.979
-
-EPOCH 10 ...
-Validation Accuracy = 0.981
-
-EPOCH 11 ...
-Validation Accuracy = 0.979
-
-EPOCH 12 ...
-Validation Accuracy = 0.982
-
-EPOCH 13 ...
-Validation Accuracy = 0.982
-
-EPOCH 14 ...
-Validation Accuracy = 0.980
-
-EPOCH 15 ...
-Validation Accuracy = 0.983
-
-EPOCH 16 ...
-Validation Accuracy = 0.979
-
-EPOCH 17 ...
-Validation Accuracy = 0.981
-
-EPOCH 18 ...
-Validation Accuracy = 0.981
-
-EPOCH 19 ...
-Validation Accuracy = 0.980
-
-EPOCH 20 ...
-Validation Accuracy = 0.980
-
-EPOCH 21 ...
-Validation Accuracy = 0.978
-
-EPOCH 22 ...
-Validation Accuracy = 0.982
-
-EPOCH 23 ...
-Validation Accuracy = 0.981
-
-EPOCH 24 ...
-Validation Accuracy = 0.983
-
-EPOCH 25 ...
-Validation Accuracy = 0.979
-
-EPOCH 26 ...
-Validation Accuracy = 0.981
-
-EPOCH 27 ...
-Validation Accuracy = 0.982
-
 EPOCH 28 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.966
 
 EPOCH 29 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.962
 
 EPOCH 30 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.969
 
 EPOCH 31 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.963
 
 EPOCH 32 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.968
 
 EPOCH 33 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.970
 
 EPOCH 34 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.967
 
 EPOCH 35 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.968
 
 EPOCH 36 ...
-Validation Accuracy = 0.977
+Validation Accuracy = 0.968
 
 EPOCH 37 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.968
 
 EPOCH 38 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.972
 
 EPOCH 39 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.968
 
 EPOCH 40 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.969
 
 EPOCH 41 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.973
 
 EPOCH 42 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.973
 
 EPOCH 43 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.969
 
 EPOCH 44 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.966
 
 EPOCH 45 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.969
 
 EPOCH 46 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.968
 
 EPOCH 47 ...
-Validation Accuracy = 0.977
+Validation Accuracy = 0.968
 
 EPOCH 48 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.971
 
 EPOCH 49 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.972
 
 EPOCH 50 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.971
 
 EPOCH 51 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 52 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.970
 
 EPOCH 53 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.968
 
 EPOCH 54 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.973
 
 EPOCH 55 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 56 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.974
 
 EPOCH 57 ...
-Validation Accuracy = 0.976
+Validation Accuracy = 0.975
 
 EPOCH 58 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 59 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.968
 
 EPOCH 60 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.974
 
 EPOCH 61 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 62 ...
-Validation Accuracy = 0.982
+Validation Accuracy = 0.976
 
 EPOCH 63 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.973
 
 EPOCH 64 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.972
 
 EPOCH 65 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.971
 
 EPOCH 66 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.974
 
 EPOCH 67 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.977
 
 EPOCH 68 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.974
 
 EPOCH 69 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.975
 
 EPOCH 70 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.976
 
 EPOCH 71 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.974
 
 EPOCH 72 ...
 Validation Accuracy = 0.980
@@ -13243,85 +12796,85 @@ EPOCH 73 ...
 Validation Accuracy = 0.977
 
 EPOCH 74 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.974
 
 EPOCH 75 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.974
 
 EPOCH 76 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.978
 
 EPOCH 77 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.975
 
 EPOCH 78 ...
-Validation Accuracy = 0.982
+Validation Accuracy = 0.976
 
 EPOCH 79 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.975
 
 EPOCH 80 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 81 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.973
 
 EPOCH 82 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.975
 
 EPOCH 83 ...
-Validation Accuracy = 0.977
+Validation Accuracy = 0.975
 
 EPOCH 84 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.976
 
 EPOCH 85 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.974
 
 EPOCH 86 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.974
 
 EPOCH 87 ...
 Validation Accuracy = 0.977
 
 EPOCH 88 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.974
 
 EPOCH 89 ...
-Validation Accuracy = 0.978
+Validation Accuracy = 0.979
 
 EPOCH 90 ...
 Validation Accuracy = 0.979
 
 EPOCH 91 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.979
 
 EPOCH 92 ...
-Validation Accuracy = 0.981
+Validation Accuracy = 0.978
 
 EPOCH 93 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.977
 
 EPOCH 94 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.979
 
 EPOCH 95 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.977
 
 EPOCH 96 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.977
 
 EPOCH 97 ...
-Validation Accuracy = 0.982
+Validation Accuracy = 0.978
 
 EPOCH 98 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.976
 
 EPOCH 99 ...
-Validation Accuracy = 0.979
+Validation Accuracy = 0.978
 
 EPOCH 100 ...
-Validation Accuracy = 0.980
+Validation Accuracy = 0.975
 
 Model saved
 </pre>
@@ -13356,7 +12909,420 @@ Model saved
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Accuracy = 0.959
+<pre>Test Accuracy = 0.954
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">training_file</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">train</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;features&#39;</span><span class="p">],</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">GetPicturesAdaptist</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_train</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training Data successfully preprocessed.&quot;</span><span class="p">)</span>
+
+<span class="n">rate</span> <span class="o">=</span> <span class="mf">0.00004</span>
+<span class="n">EPOCHS</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">192</span>
+
+
+<span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+    <span class="n">num_examples</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training...&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">EPOCHS</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">shuffle</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">X_Local_Copy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+        <span class="n">X_Local_Copy</span> <span class="o">=</span>  <span class="n">AddGaussianNoiseToSomePictures</span><span class="p">(</span><span class="n">X_Local_Copy</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">offset</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">,</span> <span class="n">BATCH_SIZE</span><span class="p">):</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">offset</span> <span class="o">+</span> <span class="n">BATCH_SIZE</span>
+            <span class="n">batch_x</span><span class="p">,</span> <span class="n">batch_y</span> <span class="o">=</span> <span class="n">X_Local_Copy</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
+            <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">training_operation</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">batch_x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">batch_y</span><span class="p">})</span>
+        
+        <span class="n">validation_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;EPOCH </span><span class="si">{}</span><span class="s2"> ...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">validation_accuracy</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">()</span>
+
+        <span class="c1">#print(xLoc)</span>
+    <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="s1">&#39;./lenet&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model saved&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/carnd/anaconda3/envs/carnd-term1/lib/python3.5/site-packages/skimage/util/dtype.py:122: UserWarning: Possible precision loss when converting from float64 to uint16
+  .format(dtypeobj_in, dtypeobj_out))
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Data successfully preprocessed.
+Training...
+
+EPOCH 1 ...
+Validation Accuracy = 0.974
+
+EPOCH 2 ...
+Validation Accuracy = 0.976
+
+EPOCH 3 ...
+Validation Accuracy = 0.977
+
+EPOCH 4 ...
+Validation Accuracy = 0.977
+
+EPOCH 5 ...
+Validation Accuracy = 0.973
+
+EPOCH 6 ...
+Validation Accuracy = 0.976
+
+EPOCH 7 ...
+Validation Accuracy = 0.974
+
+EPOCH 8 ...
+Validation Accuracy = 0.973
+
+EPOCH 9 ...
+Validation Accuracy = 0.973
+
+EPOCH 10 ...
+Validation Accuracy = 0.973
+
+EPOCH 11 ...
+Validation Accuracy = 0.975
+
+EPOCH 12 ...
+Validation Accuracy = 0.976
+
+EPOCH 13 ...
+Validation Accuracy = 0.973
+
+EPOCH 14 ...
+Validation Accuracy = 0.972
+
+EPOCH 15 ...
+Validation Accuracy = 0.973
+
+EPOCH 16 ...
+Validation Accuracy = 0.973
+
+EPOCH 17 ...
+Validation Accuracy = 0.974
+
+EPOCH 18 ...
+Validation Accuracy = 0.974
+
+EPOCH 19 ...
+Validation Accuracy = 0.975
+
+EPOCH 20 ...
+Validation Accuracy = 0.978
+
+EPOCH 21 ...
+Validation Accuracy = 0.978
+
+EPOCH 22 ...
+Validation Accuracy = 0.977
+
+EPOCH 23 ...
+Validation Accuracy = 0.976
+
+EPOCH 24 ...
+Validation Accuracy = 0.976
+
+EPOCH 25 ...
+Validation Accuracy = 0.976
+
+EPOCH 26 ...
+Validation Accuracy = 0.977
+
+EPOCH 27 ...
+Validation Accuracy = 0.974
+
+EPOCH 28 ...
+Validation Accuracy = 0.980
+
+EPOCH 29 ...
+Validation Accuracy = 0.976
+
+EPOCH 30 ...
+Validation Accuracy = 0.976
+
+EPOCH 31 ...
+Validation Accuracy = 0.977
+
+EPOCH 32 ...
+Validation Accuracy = 0.976
+
+EPOCH 33 ...
+Validation Accuracy = 0.975
+
+EPOCH 34 ...
+Validation Accuracy = 0.975
+
+EPOCH 35 ...
+Validation Accuracy = 0.969
+
+EPOCH 36 ...
+Validation Accuracy = 0.973
+
+EPOCH 37 ...
+Validation Accuracy = 0.977
+
+EPOCH 38 ...
+Validation Accuracy = 0.974
+
+EPOCH 39 ...
+Validation Accuracy = 0.977
+
+EPOCH 40 ...
+Validation Accuracy = 0.974
+
+EPOCH 41 ...
+Validation Accuracy = 0.972
+
+EPOCH 42 ...
+Validation Accuracy = 0.973
+
+EPOCH 43 ...
+Validation Accuracy = 0.975
+
+EPOCH 44 ...
+Validation Accuracy = 0.974
+
+EPOCH 45 ...
+Validation Accuracy = 0.978
+
+EPOCH 46 ...
+Validation Accuracy = 0.975
+
+EPOCH 47 ...
+Validation Accuracy = 0.976
+
+EPOCH 48 ...
+Validation Accuracy = 0.975
+
+EPOCH 49 ...
+Validation Accuracy = 0.973
+
+EPOCH 50 ...
+Validation Accuracy = 0.975
+
+EPOCH 51 ...
+Validation Accuracy = 0.975
+
+EPOCH 52 ...
+Validation Accuracy = 0.974
+
+EPOCH 53 ...
+Validation Accuracy = 0.976
+
+EPOCH 54 ...
+Validation Accuracy = 0.977
+
+EPOCH 55 ...
+Validation Accuracy = 0.977
+
+EPOCH 56 ...
+Validation Accuracy = 0.973
+
+EPOCH 57 ...
+Validation Accuracy = 0.976
+
+EPOCH 58 ...
+Validation Accuracy = 0.975
+
+EPOCH 59 ...
+Validation Accuracy = 0.976
+
+EPOCH 60 ...
+Validation Accuracy = 0.978
+
+EPOCH 61 ...
+Validation Accuracy = 0.980
+
+EPOCH 62 ...
+Validation Accuracy = 0.978
+
+EPOCH 63 ...
+Validation Accuracy = 0.978
+
+EPOCH 64 ...
+Validation Accuracy = 0.978
+
+EPOCH 65 ...
+Validation Accuracy = 0.973
+
+EPOCH 66 ...
+Validation Accuracy = 0.976
+
+EPOCH 67 ...
+Validation Accuracy = 0.973
+
+EPOCH 68 ...
+Validation Accuracy = 0.973
+
+EPOCH 69 ...
+Validation Accuracy = 0.976
+
+EPOCH 70 ...
+Validation Accuracy = 0.975
+
+EPOCH 71 ...
+Validation Accuracy = 0.978
+
+EPOCH 72 ...
+Validation Accuracy = 0.972
+
+EPOCH 73 ...
+Validation Accuracy = 0.977
+
+EPOCH 74 ...
+Validation Accuracy = 0.974
+
+EPOCH 75 ...
+Validation Accuracy = 0.976
+
+EPOCH 76 ...
+Validation Accuracy = 0.975
+
+EPOCH 77 ...
+Validation Accuracy = 0.978
+
+EPOCH 78 ...
+Validation Accuracy = 0.980
+
+EPOCH 79 ...
+Validation Accuracy = 0.974
+
+EPOCH 80 ...
+Validation Accuracy = 0.974
+
+EPOCH 81 ...
+Validation Accuracy = 0.975
+
+EPOCH 82 ...
+Validation Accuracy = 0.975
+
+EPOCH 83 ...
+Validation Accuracy = 0.975
+
+EPOCH 84 ...
+Validation Accuracy = 0.975
+
+EPOCH 85 ...
+Validation Accuracy = 0.970
+
+EPOCH 86 ...
+Validation Accuracy = 0.977
+
+EPOCH 87 ...
+Validation Accuracy = 0.976
+
+EPOCH 88 ...
+Validation Accuracy = 0.976
+
+EPOCH 89 ...
+Validation Accuracy = 0.976
+
+EPOCH 90 ...
+Validation Accuracy = 0.977
+
+EPOCH 91 ...
+Validation Accuracy = 0.974
+
+EPOCH 92 ...
+Validation Accuracy = 0.977
+
+EPOCH 93 ...
+Validation Accuracy = 0.974
+
+EPOCH 94 ...
+Validation Accuracy = 0.978
+
+EPOCH 95 ...
+Validation Accuracy = 0.976
+
+EPOCH 96 ...
+Validation Accuracy = 0.978
+
+EPOCH 97 ...
+Validation Accuracy = 0.974
+
+EPOCH 98 ...
+Validation Accuracy = 0.974
+
+EPOCH 99 ...
+Validation Accuracy = 0.976
+
+EPOCH 100 ...
+Validation Accuracy = 0.977
+
+Model saved
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">sess</span><span class="p">:</span>
+    <span class="n">saver</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">latest_checkpoint</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">))</span>
+
+    <span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test Accuracy = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_accuracy</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test Accuracy = 0.960
 </pre>
 </div>
 </div>
@@ -13388,7 +13354,7 @@ Model saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Load the images and plot them here.</span>
@@ -14117,7 +14083,7 @@ CoOfkEj5Xzu9DTnUDnY9AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Run the predictions here and use the model to output the prediction for each image.</span>
@@ -14168,7 +14134,7 @@ CoOfkEj5Xzu9DTnUDnY9AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Calculate the accuracy for these 5 new images. </span>
@@ -14250,7 +14216,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Print out the top five softmax probabilities for the predictions on the German traffic sign images found on the web. </span>
@@ -14276,18 +14242,19 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>TopKV2(values=array([[ 36.44387436,  10.07765388,   8.84771919,   4.74525881,
-          2.90457201],
-       [ 13.74033165,  11.21917343,   8.02189159,   4.04119015,   1.9902761 ],
-       [ 19.2052269 ,   4.5256424 ,   4.51255941,   2.96549726,   1.2785511 ],
-       [ 13.27102375,  10.18362522,   6.40348101,   3.60264564,
-          3.29068661],
-       [  9.14655685,   6.11674356,   5.95016336,   5.46623802,
-          3.72535157]], dtype=float32), indices=array([[12, 40,  7,  1,  2],
-       [14,  0,  3,  1, 12],
-       [17, 34,  7, 12,  9],
-       [32, 41, 38, 26,  6],
-       [33,  0, 35,  3,  1]], dtype=int32))
+<pre>TopKV2(values=array([[ 38.52018356,  11.33843803,   7.33459425,   4.66062832,
+          4.58203936],
+       [ 17.35005951,  14.52237988,  12.16987324,   9.96092319,
+          6.67507696],
+       [ 20.81615448,   5.02224207,   4.50824594,   3.6457684 ,
+          1.15351343],
+       [ 23.6336422 ,  12.62387085,   9.86502075,   8.93329334,   5.4838438 ],
+       [ 12.45770645,   8.00095463,   6.8735075 ,   6.84273386,
+          4.99594927]], dtype=float32), indices=array([[12,  7,  2,  5,  1],
+       [14, 13, 12,  1,  3],
+       [17, 34, 12, 13, 15],
+       [32, 41,  6, 12,  5],
+       [33,  1, 35,  7, 15]], dtype=int32))
 </pre>
 </div>
 </div>
@@ -14341,7 +14308,7 @@ a = np.array([[ 0.24879643,  0.07032244,  0.12641572,  0.34763842,  0.07893497,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Visualize your network&#39;s feature maps here.</span>
