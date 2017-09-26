@@ -32,8 +32,6 @@ The goals / steps of this project are the following:
 [image10]: ./TrafficSigns/32_endSpeedlimit.png "Traffic Sign 5"
 [image11]: ./TrafficSigns/33_turnRight.png "Traffic Sign 4"
 
-[image11]: ./Visualization.png "Visualization"
- 	Visualization.png
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -47,8 +45,6 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
 I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
@@ -58,7 +54,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3).
 * The number of unique classes/labels in the data set is 43.
 
-####Visualization of the dataset.
+###2. Visualisation of the dataset.
 
 Here is an exploratory visualization of the data set. It shows how the images are distributed among the different classes.
 
@@ -69,11 +65,39 @@ Here is an exploratory visualization of the data set. It shows how the images ar
 
 ####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided to convert the images to grayscale because I did not see an improvement in accuracy with rgb pictures.
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+<img src="processed/1_normal.png " width="480"/>
+<br>
+<img src="processed/2_gray.png " width="480"/>
+<br><br>
+
+
+To optimize brightness and contrast I applied Adaptive histogram equalization.
+
+<img src="processed/3_adapt.png " width="480"/>
+<br><br>
+
+
+The more samples you have available for training the higher is the accuracy, the amount of pictures can in some classes be increased by mirroring the picture.
+
+<img src="processed/4_flipped.png " width="480"/>
+<br><br>
+
+
+As you can see in the visualisation, the distibution of the samples in the different classes is very different. To increase the accuracy it seems to me you need to have an equal amount of samples for every class. Even after the mirroring some classes have as little as 200 pictures. If we would now just take 200 samples from every class we would ignore a big part of our valuable samples. The logical consequence is to copy the samples in certain classes to multiply the them, to add some variance to every copied picture is slightly rotated.
+
+<img src="processed/5_rotated.png " width="480"/>
+<br><br>
+
+
+In the program 4000 samples each were used, this means in some classed a sample might have been copied up to 20 times. To further increase the variance I applied some small transformation on a certain percentage.
+
+<img src="processed/6_transformed.png " width="480"/>
+<br><br>
+
 
 As a last step, I normalized the image data because ...
 
