@@ -32,6 +32,9 @@ The goals / steps of this project are the following:
 [image10]: ./TrafficSigns/32_endSpeedlimit.png "Traffic Sign 5"
 [image11]: ./TrafficSigns/33_turnRight.png "Traffic Sign 4"
 
+[image11]: ./Visualization.png "Visualization"
+ 	Visualization.png
+
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -46,20 +49,20 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
+I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The training set consists of 34799 samples.
+* The size of the validation set is ??????????????????
+* The test set is consists of 12630 samples.
+* The shape of a traffic sign image is (32, 32, 3).
+* The number of unique classes/labels in the data set is 43.
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It shows how the images are distributed among the different classes.
 
-![alt text][image1]
+![alt text][image11]
 
 ###Design and Test a Model Architecture
 
