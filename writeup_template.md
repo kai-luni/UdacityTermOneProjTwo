@@ -69,47 +69,37 @@ As a first step, I decided to convert the images to grayscale because I did not 
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-<img src="processed/1_normal.png " width="480"/>
+<img src="Pictures/Processed/1_normal.png" width="480"/>
 <br>
-<img src="processed/2_gray.png " width="480"/>
+<img src="Pictures/Processed/2_gray.png" width="480"/>
 <br><br>
 
 
 To optimize brightness and contrast I applied Adaptive histogram equalization.
 
-<img src="processed/3_adapt.png " width="480"/>
+<img src="Pictures/Processed/3_adapt.png" width="480"/>
 <br><br>
 
 
 The more samples you have available for training the higher is the accuracy, the amount of pictures can in some classes be increased by mirroring the picture.
 
-<img src="processed/4_flipped.png " width="480"/>
+<img src="Pictures/Processed/4_flipped.png" width="480"/>
 <br><br>
 
 
 As you can see in the visualisation, the distibution of the samples in the different classes is very different. To increase the accuracy it seems to me you need to have an equal amount of samples for every class. Even after the mirroring some classes have as little as 200 pictures. If we would now just take 200 samples from every class we would ignore a big part of our valuable samples. The logical consequence is to copy the samples in certain classes to multiply the them, to add some variance to every copied picture is slightly rotated.
 
-<img src="processed/5_rotated.png " width="480"/>
+<img src="Pictures/Processed/5_rotated.png" width="480"/>
 <br><br>
 
 
 In the program 4000 samples each were used, this means in some classed a sample might have been copied up to 20 times. To further increase the variance I applied some small transformation on a certain percentage.
 
-<img src="processed/6_transformed.png " width="480"/>
+<img src="Pictures/Processed/6_transformed.png" width="480"/>
 <br><br>
 
 
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+As a last step, I normalized the image data in the range from -1 to 1 as this makes sense mathematically for the statistical calculations of the weights.
 
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
