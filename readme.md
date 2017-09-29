@@ -76,7 +76,7 @@ The more samples you have available for training the higher is the accuracy, the
 <br><br>
 
 
-As you can see in the visualisation, the distibution of the samples in the different classes is very different. To increase the accuracy it seems to me you need to have an equal amount of samples for every class. Even after the mirroring some classes have as little as 200 pictures. If we would now just take 200 samples from every class we would ignore a big part of our valuable samples. The logical consequence is to copy the samples in certain classes to multiply the them, to add some variance to every copied picture is slightly rotated.
+As you can see in the visualisation, the distibution of the samples in the different classes is very different. To increase the accuracy it seems to me you need to have an equal amount of samples for every class. Even after the mirroring some classes have as little as 200 pictures. If we would now just take 200 samples from every class we would ignore a big part of our valuable samples. The logical consequence is to copy the samples in certain classes to multiply them. To add some variance to every copied picture, every copy is slightly rotated.
 
 <img src="Pictures/Processed/5_rotated.png" width="480"/>
 <br><br>
