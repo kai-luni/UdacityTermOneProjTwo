@@ -164,9 +164,11 @@ My final model consisted of the following layers:
 </table>
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+##3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used the Tensorflow implementation of the Adam Algorithm, which is called Adam Optimizer. This seems to do a good job and I did not touch it. As the count of the used samples is high with 4000 images per class, the learning rate was set to a very small number with 0.00008 and even lower to the second run with 0.00004.
+
+Epochs were set to 100, which took about one hour for each run. Per iteration 192 samples were loaded, a higher number here might have been higher depending on the graphic card and its amount of memory used.
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
