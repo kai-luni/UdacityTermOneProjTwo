@@ -115,7 +115,7 @@ My final model consisted of the following layers:
  </tr>
  <tr>
   <td>Dropout</td>
-  <td>keep:70%</td>
+  <td>keep:90%</td>
  </tr>
  <tr>
   <td style="font-weight: bold;">Convolution 5x5</td>
@@ -168,15 +168,17 @@ My final model consisted of the following layers:
 
 To train the model, I used the Tensorflow implementation of the Adam Algorithm, which is called Adam Optimizer. This seems to do a good job and I did not touch it. As the count of the used samples is high with 4000 images per class, the learning rate was set to a very small number with 0.00008 and even lower to the second run with 0.00004.
 
-Epochs were set to 100, which took about one hour for each run. Per iteration 192 samples were loaded, a higher number here might have been higher depending on the graphic card and its amount of memory used.
+Epochs were set to 100, which took about one hour for each run. Per iteration 192 samples were loaded, a higher number here would have made the whole process faster and increase the needed memory.
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
 * training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* validation set accuracy of 97.7% 
+* test set accuracy of 96.0%
 
+
+>>>>>>>>>>>>>>>
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 * What were some problems with the initial architecture?
@@ -188,7 +190,17 @@ If a well known architecture was chosen:
 * What architecture was chosen?
 * Why did you believe it would be relevant to the traffic sign application?
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+ >>>>>>>>>>>>>>>>>>>>>>
  
+The architecture I used was the LeNet Convolutional Neural Network implementation provided from Udacity. I stayed with this architecture as it had promising results with an accuracy of 89% from the start. My first approach was to add a new Fully connected layer as I learned in class "The deeper the better". The increase in accuracy was small and I added a droput on the second convolutional layer and the accuracy improved more as expected.
+
+Next I went to adding more contrast to the rgb training pictures and with those I was in the range of 92% accuracy and I stayed there for a long time. I started to flip certain images to multiply them, took even amounts of pictures by each class and tried different learning rates and sample sizes. I also started multiplying and slightly changing the training samples by rotation and transformation. It seemed to get over this 92% accuracy was difficult.
+
+After that I changed the pictures to grayscale and applied Adaptive Histogram Equalization. The function from skimage.exposure has the 2 parameters kernel_size nad clip_limit and I kept changing them until especially the brighness of the pictures was satisfying. My final parameters are 575 for kernel_size and 0.009 for clip_limit. With those much better quality samples I was much closes to the accuracy of 93%. 
+
+The breakthrough came when I changed the convolutional layers. I added one more layer which took a bit time to calculate the output sizes of each layer and get a reasonable size for the first fully connected layer. After the new layer no Max Pooling was applied, because it always halfes the picture size and the final output would have been to small. A seemingly good output after the third convolutional layer could be finally archieved by the padding 'VALID'. This reconstruction increased the amount of neurons in the architecture and in contrast to the added fully connected layer in the beginning, this time there was a leap in Accuracy to as high as 95%.
+
+In the last step I finetuned droput and applied it on all 3 convolutional layers, decreased the intensity of the transformation and added some noise to some pictures. Further on I reloaded all the standard pictures, and just applied Adaptive Histogram Equalization without multliplying and so on. In this second round I also halfed the learning rate again. The idea is to finetune the neural network. Just the very lust step of finetuning increased the result another 0.6%.
 
 ###Test a Model on New Images
 
