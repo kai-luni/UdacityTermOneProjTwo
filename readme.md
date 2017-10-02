@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 
-## Data Set Summary & Exploration
+## Data Set Summary
 
 I used the numpy library to calculate summary statistics of the traffic
 signs data set:
@@ -39,7 +39,7 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3).
 * The number of unique classes/labels in the data set is 43.
 
-## Visualisation of the dataset.
+## Exploratory Visualization
 
 Here is an exploratory visualization of the data set. It shows how the images are distributed among the different classes.
 
@@ -47,8 +47,6 @@ Here is an exploratory visualization of the data set. It shows how the images ar
 <br><br>
 
 ## Preprocessing
-
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to convert the images to grayscale because I did not see an improvement in accuracy with rgb pictures.
 
@@ -160,33 +158,18 @@ My final model consisted of the following layers:
 </table>
 
 
-##3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+## Model Training
 
 To train the model, I used the Tensorflow implementation of the Adam Algorithm, which is called Adam Optimizer. This seems to do a good job and I did not touch it. As the count of the used samples is high with 4000 images per class, the learning rate was set to a very small number with 0.00008 and even lower to the second run with 0.00004.
 
 Epochs were set to 100, which took about one hour for each run. Per iteration 192 samples were loaded, a higher number here would have made the whole process faster and increase the needed memory.
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+## Solution Approach
 
 My final model results were:
-* training set accuracy of ?
+* training set accuracy of ??????????????????????????
 * validation set accuracy of 97.7% 
 * test set accuracy of 96.0%
-
-
->>>>>>>>>>>>>>>
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- >>>>>>>>>>>>>>>>>>>>>>
  
 The architecture I used was the LeNet Convolutional Neural Network implementation provided from Udacity. I stayed with this architecture as it had promising results with an accuracy of 89% from the start. My first approach was to add a new Fully connected layer as I learned in class "The deeper the better". The increase in accuracy was small and I added a droput on the second convolutional layer and the accuracy improved more as expected.
 
@@ -198,10 +181,7 @@ The breakthrough came when I changed the convolutional layers. I added one more 
 
 In the last step I finetuned droput and applied it on all 3 convolutional layers, decreased the intensity of the transformation and added some noise to some pictures. Further on I reloaded all the standard pictures, and just applied Adaptive Histogram Equalization without multliplying and so on. In this second round I also halfed the learning rate again. The idea is to finetune the neural network. Just the very lust step of finetuning increased the result another 0.6%.
 
-###Test a Model on New Images
-
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
-
+## Acquiring New Images
 Here are five German traffic signs that I found on the web:
 
 The priority road sign is very similar to another german traffic sign, even its not included in this project. Its called "end of priority road". If this would be included, the two of them might be easily confused from the convolutional neural network.
@@ -231,7 +211,7 @@ There are again some traffic sign that look very similar to this one.
 <br>
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+## Performance on New Images
 
 Here are the results of the prediction:
 
@@ -250,16 +230,41 @@ The model was able to predict all 5 pictures from the internet correctly, which 
 
 ##Model Certainty - Softmax Probabilities
 <table>
- <tr><td colspan="2">Stop sign</td></tr>
- <tr><td>Priority sign</td><td>Priority sign</td></tr>
- <tr><td colspan="2">Stop sign</td></tr>
- <tr><td>Priority sign</td><td>Priority sign</td></tr>
- <tr><td colspan="2">Stop sign</td></tr>
- <tr><td>Priority sign</td><td>Priority sign</td></tr>
- <tr><td colspan="2">Stop sign</td></tr>
- <tr><td>Priority sign</td><td>Priority sign</td></tr>
- <tr><td colspan="2">Stop sign</td></tr>
- <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Priority sign</td></tr>
+ <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Stop sign</td></tr>
+ <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">No entry</td></tr>
+ <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">End speedlimit</td></tr>
+ <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Turn right</td></tr>
+ <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
+  <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
+ <tr><td></td><td></td></tr>
 <table>
 
 
