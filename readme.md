@@ -21,11 +21,7 @@ The goals / steps of this project are the following:
 [image5]: ./processed/5_rotated.png "Slightly Rotated"
 [image6]: ./processed/6_transformed.png "Slightly Transformed"
 
-[image7]: ./TrafficSigns/12_priorityRoad.png "Traffic Sign 4"
-[image8]: ./TrafficSigns/14_stop.png "Traffic Sign 5"
-[image9]: ./TrafficSigns/17_noEntry.png "Traffic Sign 4"
-[image10]: ./TrafficSigns/32_endSpeedlimit.png "Traffic Sign 5"
-[image11]: ./TrafficSigns/33_turnRight.png "Traffic Sign 4"
+
 
 
 ###Rubric Points
@@ -208,25 +204,54 @@ In the last step I finetuned droput and applied it on all 3 convolutional layers
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+The priority road sign hast clearly defines edges and should be easy to be recognized. There is another german traffic sign that is very similar though, even its not included in this project. It call "end of priority road". If this would be included, the two of them might be easily confused from the convolutional neural network.
+<img src="Pictures/TrafficSigns/12_priorityRoad.png" width="480"/>
+<br>
+The stop sign has a relatively complex pattern, which is the text on the sign. Especially on the low resolution this might be hard to grasp for a neural network.
+<img src="Pictures/Processed/14_stop.png" width="480"/>
+<br>
+The no entry sign is round with good visible edges and its content is very different from any other traffic sign. It should be easily recognized.
+<img src="Pictures/Processed/17_noEntry.png" width="480"/>
+<br>
+It seems to me that the angle this picture was taken from is not directly from the front and this might be a problem factor.
+<img src="Pictures/Processed/32_endSpeedlimit.png" width="480"/>
+<br>
+There are again some traffic sign that look very similar to this one.
+<img src="Pictures/Processed/33_turnRight.png" width="480"/>
+<br>
 
-The first image might be difficult to classify because ...
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+<table>
+ <tr><td>Image</td><td>Prediction</td></tr>
+ <tr><td>Priority sign<td/><td>Priority sign<td/></tr>
+ <tr><td>Stop sign<td/><td>Stop sign<td/></tr>
+ <tr><td>No Entry<td/><td>No Entry<td/></tr>
+ <tr><td>End speed limit<td/><td>End speed limit<td/></tr>
+ <tr><td>Turn right<td/><td>Turn right<td/></tr>
+<table>
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to predict all 5 pictures from the internet correctly, which corresponds with the accuracy on the training data.
+
+
+##Model Certainty - Softmax Probabilities
+<table>
+ <tr><td colspan="2">Stop sign</td></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td colspan="2">Stop sign</td></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td colspan="2">Stop sign</td></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td colspan="2">Stop sign</td></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td colspan="2">Stop sign</td></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+<table>
+
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -245,7 +270,5 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
