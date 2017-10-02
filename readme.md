@@ -208,16 +208,16 @@ The priority road sign hast clearly defines edges and should be easy to be recog
 <img src="Pictures/TrafficSigns/12_priorityRoad.png" width="480"/>
 <br>
 The stop sign has a relatively complex pattern, which is the text on the sign. Especially on the low resolution this might be hard to grasp for a neural network.
-<img src="Pictures/Processed/14_stop.png" width="480"/>
+<img src="Pictures/TrafficSigns/14_stop.png" width="480"/>
 <br>
 The no entry sign is round with good visible edges and its content is very different from any other traffic sign. It should be easily recognized.
-<img src="Pictures/Processed/17_noEntry.png" width="480"/>
+<img src="Pictures/TrafficSigns/17_noEntry.png" width="480"/>
 <br>
 It seems to me that the angle this picture was taken from is not directly from the front and this might be a problem factor.
-<img src="Pictures/Processed/32_endSpeedlimit.png" width="480"/>
+<img src="Pictures/TrafficSigns/32_endSpeedlimit.png" width="480"/>
 <br>
 There are again some traffic sign that look very similar to this one.
-<img src="Pictures/Processed/33_turnRight.png" width="480"/>
+<img src="Pictures/TrafficSigns/33_turnRight.png" width="480"/>
 <br>
 
 
