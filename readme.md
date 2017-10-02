@@ -34,7 +34,7 @@ I used the numpy library to calculate summary statistics of the traffic
 signs data set:
 
 * The training set consists of 34799 samples.
-* The size of the validation set is ??????????????????
+* The the validation set consists of 4410 samples.
 * The test set is consists of 12630 samples.
 * The shape of a traffic sign image is (32, 32, 3).
 * The number of unique classes/labels in the data set is 43.
@@ -204,20 +204,30 @@ In the last step I finetuned droput and applied it on all 3 convolutional layers
 
 Here are five German traffic signs that I found on the web:
 
-The priority road sign hast clearly defines edges and should be easy to be recognized. There is another german traffic sign that is very similar though, even its not included in this project. It call "end of priority road". If this would be included, the two of them might be easily confused from the convolutional neural network.
+The priority road sign is very similar to another german traffic sign, even its not included in this project. Its called "end of priority road". If this would be included, the two of them might be easily confused from the convolutional neural network.
+<br>
 <img src="Pictures/TrafficSigns/12_priorityRoad.png" width="480"/>
 <br>
+<br>
 The stop sign has a relatively complex pattern, which is the text on the sign. Especially on the low resolution this might be hard to grasp for a neural network.
+<br>
 <img src="Pictures/TrafficSigns/14_stop.png" width="480"/>
 <br>
+<br>
 The no entry sign is round with good visible edges and its content is very different from any other traffic sign. It should be easily recognized.
+<br>
 <img src="Pictures/TrafficSigns/17_noEntry.png" width="480"/>
 <br>
+<br>
 It seems to me that the angle this picture was taken from is not directly from the front and this might be a problem factor.
+<br>
 <img src="Pictures/TrafficSigns/32_endSpeedlimit.png" width="480"/>
 <br>
+<br>
 There are again some traffic sign that look very similar to this one.
+<br>
 <img src="Pictures/TrafficSigns/33_turnRight.png" width="480"/>
+<br>
 <br>
 
 
