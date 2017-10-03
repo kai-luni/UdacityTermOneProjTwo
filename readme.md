@@ -167,9 +167,9 @@ Epochs were set to 100, which took about one hour for each run. Per iteration 19
 ## Solution Approach
 
 My final model results were:
-* training set accuracy of ??????????????????????????
-* validation set accuracy of 97.7% 
-* test set accuracy of 96.0%
+* training set accuracy of 99.3%
+* validation set accuracy of 97.6% 
+* test set accuracy of 96.1%
  
 The architecture I used was the LeNet Convolutional Neural Network implementation provided from Udacity. I stayed with this architecture as it had promising results with an accuracy of 89% from the start. My first approach was to add a new Fully connected layer as I learned in class "The deeper the better". The increase in accuracy was small and I added a droput on the second convolutional layer and the accuracy improved more as expected.
 
@@ -225,65 +225,77 @@ Here are the results of the prediction:
 <table>
 
 
-The model was able to predict all 5 pictures from the internet correctly, which corresponds with the accuracy on the training data.
+The model was able to predict all 5 pictures from the internet correctly, which corresponds with the accuracy on the test set.
 
 
 ##Model Certainty - Softmax Probabilities
+
+The code to print out the predictions with probabilities can be found in code cell 24.
+
+The prediction of the first picture is with 31% certainty Priority road, which is correct. I did not find that the picture in rank 2 to five have much in common, but their probabilities are also relatively low between 7% and 15%.
+
 <table>
- <tr><td colspan="2" style="font-weight=bold;text-align: center;">Priority sign</td></tr>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Priority road</td></tr>
  <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td colspan="2" style="font-weight=bold;text-align: center;">Stop sign</td></tr>
+ <tr><td>31</td><td>Priority road</td></tr>
+ <tr><td>15</td><td>Roundabout mandatory</td></tr>
+ <tr><td>13</td><td>Speed Limit 100</td></tr>
+ <tr><td>8</td><td>Speed Limit 30</td></tr>
+ <tr><td>7</td><td>Speed Limit 50</td></tr>
+</table>
+
+
+The stop sign was also predicted correctly with 31% certainty and the prediction two to five have a higher distance than in the first prediction.
+
+<table>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Stop</td></tr>
  <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
+ <tr><td>31</td><td>Stop</td></tr>
+ <tr><td>8</td><td>Priority road</td></tr>
+ <tr><td>7</td><td>Yield</td></tr>
+ <tr><td>6</td><td>No vehicles</td></tr>
+ <tr><td>5</td><td>Keep right</td></tr>
+</table>
+
+
+In picture number 3 its again 31% for the number one correction. The prediction on the second place is "No passing", which is also round and has some similarities. 
+
+<table>
  <tr><td colspan="2" style="font-weight=bold;text-align: center;">No entry</td></tr>
  <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
+ <tr><td>31</td><td>No entry</td></tr>
+ <tr><td>12</td><td>No passing</td></tr>
+ <tr><td>10</td><td>Stop</td></tr>
+ <tr><td>9</td><td>Turn left ahead</td></tr>
+ <tr><td>8</td><td>Yield</td></tr>
+</table>
+
+
+Here you can see that the prediction possiblity is with 20% not so high. The picture on the second place does look similar and there are many more signs that have a similarity in their look.
+
+<table>
  <tr><td colspan="2" style="font-weight=bold;text-align: center;">End speedlimit</td></tr>
  <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td colspan="2" style="font-weight=bold;text-align: center;">Turn right</td></tr>
+ <tr><td>20</td><td>End speedlimit</td></tr>
+ <tr><td>13</td><td>End no passing</td></tr>
+ <tr><td>6</td><td>End speedlimit 80</td></tr>
+ <tr><td>5</td><td>Priority road</td></tr>
+ <tr><td>5</td><td>Speed limit 30</td></tr>
+</table>
+
+
+In this picture the convolutional neural network is a bit more sure about the prediction than in the last one. Many of the other predictions are very similar again.
+
+<table>
+ <tr><td colspan="2" style="font-weight=bold;text-align: center;">Turn right ahead</td></tr>
  <tr style="font-weight=bold;"><td>Probability</td><td>Prediction</td></tr>
-  <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
- <tr><td></td><td></td></tr>
+ <tr><td>29</td><td>Turn right ahead</td></tr>
+ <tr><td>10</td><td>Ahead only</td></tr>
+ <tr><td>10</td><td>Speed limit 30</td></tr>
+ <tr><td>5</td><td>Right way next intersection</td></tr>
+ <tr><td>3</td><td>Go straight or right</td></tr>
 <table>
 
-
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
-
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
 
 
 
