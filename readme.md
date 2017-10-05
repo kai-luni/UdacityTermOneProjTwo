@@ -1,28 +1,3 @@
-#**Traffic Sign Recognition** 
-
-
-**Build a Traffic Sign Recognition Project**
-
-The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./processed/1_normal.png "Original"
-[image2]: ./processed/2_gray.png "Grayscaling"
-[image3]: ./processed/3_adapt.png "Adaptive Histogram Equalization"
-[image4]: ./processed/4_flipped.png "Flipped"
-[image5]: ./processed/5_rotated.png "Slightly Rotated"
-[image6]: ./processed/6_transformed.png "Slightly Transformed"
-
-
-
 
 ###Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -87,7 +62,7 @@ As a last step, I normalized the image data in the range from -1 to 1 as this ma
 
 ##2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-## Architecture
+## Model Architecture
 My final model consisted of the following layers:
 
 <table>
@@ -160,7 +135,7 @@ My final model consisted of the following layers:
 
 ## Model Training
 
-To train the model, I used the Tensorflow implementation of the Adam Algorithm, which is called Adam Optimizer. This seems to do a good job and I did not touch it. As the count of the used samples is high with 4000 images per class, the learning rate was set to a very small number with 0.00008 and even lower to the second run with 0.00004.
+To train the model, I used the Tensorflow implementation of the Adam Algorithm, which is called Adam Optimizer. This seems to do a good job and I did not touch it. As the count of the used samples is high with 4000 images per class, the learning rate was set to a very small number with 0.00008 and even lower to the second run with 0.00002.
 
 Epochs were set to 100, which took about one hour for each run. Per iteration 192 samples were loaded, a higher number here would have made the whole process faster and increase the needed memory.
 
@@ -175,11 +150,11 @@ The architecture I used was the LeNet Convolutional Neural Network implementatio
 
 Next I went to adding more contrast to the rgb training pictures and with those I was in the range of 92% accuracy and I stayed there for a long time. I started to flip certain images to multiply them, took even amounts of pictures by each class and tried different learning rates and sample sizes. I also started multiplying and slightly changing the training samples by rotation and transformation. It seemed to get over this 92% accuracy was difficult.
 
-After that I changed the pictures to grayscale and applied Adaptive Histogram Equalization. The function from skimage.exposure has the 2 parameters kernel_size nad clip_limit and I kept changing them until especially the brighness of the pictures was satisfying. My final parameters are 575 for kernel_size and 0.009 for clip_limit. With those much better quality samples I was much closes to the accuracy of 93%. 
+After that I changed the pictures to grayscale and applied Adaptive Histogram Equalization. The function from skimage.exposure has the 2 parameters kernel_size and clip_limit and I kept adjusting them until especially the brighness of the pictures was satisfying. My final parameters are 575 for kernel_size and 0.009 for clip_limit. With those much better quality samples I was much closer to the accuracy of 93%. 
 
-The breakthrough came when I changed the convolutional layers. I added one more layer which took a bit time to calculate the output sizes of each layer and get a reasonable size for the first fully connected layer. After the new layer no Max Pooling was applied, because it always halfes the picture size and the final output would have been to small. A seemingly good output after the third convolutional layer could be finally archieved by the padding 'VALID'. This reconstruction increased the amount of neurons in the architecture and in contrast to the added fully connected layer in the beginning, this time there was a leap in Accuracy to as high as 95%.
+The breakthrough came when I changed the convolutional layers. I added one more layer which took a bit time to calculate the output sizes of each layer and get a reasonable size for the first fully connected layer. After the new layer no Max Pooling was applied, because it always halfes the picture size and the final output would have been to small. A seemingly good output after the third convolutional layer could be finally archieved by the padding 'VALID'. This reconstruction increased the amount of neurons in the architecture and in contrast to the added fully connected layer in the beginning, this time there was a leap in Accuracy to as high as 95%. The extra added fully connected layer was removed again at this point.
 
-In the last step I finetuned droput and applied it on all 3 convolutional layers, decreased the intensity of the transformation and added some noise to some pictures. Further on I reloaded all the standard pictures, and just applied Adaptive Histogram Equalization without multliplying and so on. In this second round I also halfed the learning rate again. The idea is to finetune the neural network. Just the very lust step of finetuning increased the result another 0.6%.
+In the last step I finetuned droput and applied it on all 3 convolutional layers, decreased the intensity of the transformation and added noise to some pictures. Further on I reloaded all the standard pictures, and just applied Adaptive Histogram Equalization without multliplying and so on. In this second round I also quartered the learning rate again. The idea is to finetune the neural network. Just the very lust step of finetuning increased the result another 0.5% to my final accuracy of 96.1%.
 
 ## Acquiring New Images
 Here are five German traffic signs that I found on the web:
@@ -222,7 +197,7 @@ Here are the results of the prediction:
  <tr><td>No Entry<td/><td>No Entry<td/></tr>
  <tr><td>End speed limit<td/><td>End speed limit<td/></tr>
  <tr><td>Turn right<td/><td>Turn right<td/></tr>
-<table>
+</table>
 
 
 The model was able to predict all 5 pictures from the internet correctly, which corresponds with the accuracy on the test set.
