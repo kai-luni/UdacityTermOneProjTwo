@@ -192,11 +192,11 @@ Here are the results of the prediction:
 
 <table>
  <tr><td>Image</td><td>Prediction</td></tr>
- <tr><td>Priority sign</td><td>Priority sign<td/></tr>
- <tr><td>Stop sign</td><td>Stop sign<td/></tr>
- <tr><td>No Entry</td><td>No Entry<td/></tr>
- <tr><td>End speed limit</td><td>End speed limit<td/></tr>
- <tr><td>Turn right</td><td>Turn right<td/></tr>
+ <tr><td>Priority sign</td><td>Priority sign</td></tr>
+ <tr><td>Stop sign</td><td>Stop sign</td></tr>
+ <tr><td>No Entry</td><td>No Entry</td></tr>
+ <tr><td>End speed limit</td><td>End speed limit</td></tr>
+ <tr><td>Turn right</td><td>Turn right</td></tr>
 </table>
 
 
