@@ -6,7 +6,7 @@
 ## Data Set Summary
 
 I used the numpy library to calculate summary statistics of the traffic
-signs data set::
+signs data set:
 
 * The training set consists of 34799 samples.
 * The the validation set consists of 4410 samples.
